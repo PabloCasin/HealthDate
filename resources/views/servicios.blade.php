@@ -62,7 +62,14 @@ Servicios
                   </div>
               @endif
               </td>
-              <td>Editar | <a href="/servicios/{{$servicio->id}}">Ver</a> | Borrar</td>
+              <td>
+              <button type="button" rel="tooltip" title="Editar Servicio" class="btn btn-primary btn-link btn-sm">
+                    <i class="material-icons">edit</i>
+                  </button>
+                  <button type="button" rel="tooltip" title="Borrar Servicio" class="btn btn-danger btn-link btn-sm">
+                    <i class="material-icons">close</i>
+                  </button>
+              </td>
             </tr>
            @endforeach
           </tbody>

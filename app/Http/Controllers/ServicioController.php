@@ -17,6 +17,8 @@ class ServicioController extends Controller
         return view('servicio')->with('servicio',$servicio);
     }
     
-    
+    public static function update(){
+        
+    }
     
 }
