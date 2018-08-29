@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FacultativoController;
 use App\Http\Controllers\ServicioController;
+use App\Http\Controllers\DataController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +23,8 @@ Route::resource('/servicios','ServicioController');
 Route::get('/escritorio',function (){
     return view('dashboard');
 });
+
+Route::get('/calendarios',function (){
+    return view('calendarios');
+});
+Route::get('/agenda','DataController@agendaJSON');
