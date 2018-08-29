@@ -27,4 +27,5 @@ Route::get('/escritorio',function (){
 Route::get('/calendarios',function (){
     return view('calendarios');
 });
-Route::get('/agenda','DataController@agendaJSON');
+Route::get('/agenda','AgendaController@agendaJSON');
+Route::get('/agenda/{id}','AgendaController@facultativo');

@@ -24,7 +24,10 @@ Facultativos
               Email
             </th>
             <th>
-              Salary
+              Especialidad
+            </th>
+            <th>
+              Agenda
             </th>
           </thead>
           <tbody>
@@ -46,6 +49,10 @@ Facultativos
 				<?php var_dump($facultativo->servicio)?>
                 {{$facultativo->servicio}}
               </td>
+              <td>
+              <button type="button" rel="tooltip" title="Agenda del Facultativo" class="btn btn-primary btn-link btn-sm">
+                    <i class="material-icons">schedule</i>
+                  </button></td>
             </tr>
            @endforeach
           </tbody>
