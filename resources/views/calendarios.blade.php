@@ -8,25 +8,21 @@ Agendas
   $(document).ready(function() {
 
 	  $('#calendar').fullCalendar({
-		  defaultView: 'listWeek',
-	      defaultDate: '2018-03-12',
+	      defaultDate: '2018-08-30',
 	      firstDay:'1',
 	      locale: 'es',
-	      editable: true,
 	      eventLimit: true, // allow "more" link when too many events
 	      header:{
 	    	  left:   'title',
 	    	  center: '',
 	    	  right:  'today prev,next'
 	    	},
-        	eventSources: [
-        	    {
-        	      url: '/agenda', // use the `url` property
-        	      color: 'yellow',    // an option!
-        	      textColor: 'black',  // an option!
-        	      startParam:'fechaCita'
-        	    }
-        	  ]
+	    	eventSources:[
+			{
+				url:'/agenda',
+				textColor: 'white'
+			}
+	    	]
 	    });
 	  
   });
