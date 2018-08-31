@@ -18,8 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/facultativos','FacultativoController@index');
+Route::resource('/facultativos','FacultativoController');
 Route::resource('/servicios','ServicioController');
+
 Route::get('/escritorio',function (){
     return view('dashboard');
 });

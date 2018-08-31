@@ -50,9 +50,8 @@ Facultativos
                 {{$facultativo->servicio}}
               </td>
               <td>
-              <button type="button" rel="tooltip" title="Agenda del Facultativo" class="btn btn-primary btn-link btn-sm">
-                    <i class="material-icons">schedule</i>
-                  </button></td>
+              <a href="/facultativos/{{$facultativo->id}}"><i class="material-icons">schedule</i></a>
+               </td>
             </tr>
            @endforeach
           </tbody>

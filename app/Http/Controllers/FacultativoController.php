@@ -12,7 +12,8 @@ class FacultativoController extends Controller
         return view('facultativos')->with('facultativos',$facultativos);
     }
     
-    public function servicio(){
-        return $this->belongsTo('App\Servicio');
+    public function show($id){
+        $facultativo = Facultativo::find($id);
+        return view('facultativo')->with('facultativo',$facultativo);
     }
 }
