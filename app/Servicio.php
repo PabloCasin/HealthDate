@@ -9,6 +9,6 @@ class Servicio extends Model
     //
     public function facultativo()
     {
-        return $this->hasOne(Facultativo::class);
+        return $this->hasOne(Facultativo::class,"facultativos_id");
     }
 }

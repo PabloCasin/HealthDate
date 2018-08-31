@@ -9,7 +9,7 @@ class Facultativo extends Model
     //
     public function servicio()
     {
-        return $this->belongsTo(Servicio::class);
+        return $this->belongsTo(Servicio::class,"servicios_id");
     }
 
 }

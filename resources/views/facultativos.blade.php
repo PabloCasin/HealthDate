@@ -46,8 +46,7 @@ Facultativos
                 {{$facultativo->email}}
               </td>
               <td>
-				<?php var_dump($facultativo->servicio)?>
-                {{$facultativo->servicio}}
+                {{$facultativo->servicio->nombreUnidad}}
               </td>
               <td>
               <a href="/facultativos/{{$facultativo->id}}"><i class="material-icons">schedule</i></a>

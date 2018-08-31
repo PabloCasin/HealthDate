@@ -23,7 +23,7 @@ Facultativo
           </a>
         </div>
         <div class="card-body">
-          <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+          <h6 class="card-category text-gray">{{$facultativo->servicio->nombreUnidad}}</h6>
           <h4 class="card-title">{{$facultativo->tratamiento}} {{$facultativo->nombre}} {{$facultativo->apellido}}</h4>
           <p class="card-description">
           {{$facultativo->direccion}} {{$facultativo->cp}}<br>
