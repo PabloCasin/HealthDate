@@ -47,7 +47,6 @@ echo"
 
 	  $('#calendar').fullCalendar({
           defaultView: 'listWeek',  
-	      defaultDate: '2018-08-30',
 	      firstDay:'1',
 	      locale: 'es',
 	      eventLimit: true,

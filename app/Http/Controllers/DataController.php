@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Facultativo;
 use App\Servicio;
 use App\User;
+use App\Agenda;
 
 
 
@@ -23,5 +24,12 @@ class DataController extends Controller
         echo User::where('rol','paciente')->count();
     }
     
-
+    public static function proximasCitas(){
+       
+        $citas = Agenda::where('fechaCita',date('Y-m-d'))
+             ->orderBy('horaEntrada','asc')
+             ->join('facultativos','facultativos_id','facultativos.id')
+             ->get();
+        return $citas;
+    }
 }

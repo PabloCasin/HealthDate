@@ -1,6 +1,6 @@
 @extends('layouts.backendCalendario')
 @section('titulo')
-Agendas
+Calendario
 @endsection
 @section('script')
 <script>
@@ -8,7 +8,6 @@ Agendas
   $(document).ready(function() {
 
 	  $('#calendar').fullCalendar({
-	      defaultDate: '2018-08-30',
 	      firstDay:'1',
 	      locale: 'es',
 	      eventLimit: true, // allow "more" link when too many events
@@ -30,5 +29,7 @@ Agendas
 </script>
 @endsection
 @section('contenido')
-  <div id='calendar'></div>
+  <div class="row justify-content-md-center">
+  	<div id='calendar' class="col-md-10"></div>
+  </div>
 @endsection
