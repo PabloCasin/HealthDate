@@ -3,6 +3,7 @@
 use App\Http\Controllers\FacultativoController;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +21,10 @@ Route::get('/', function () {
 
 Route::resource('/facultativos','FacultativoController');
 Route::resource('/servicios','ServicioController');
+//Route::resource('/usuarios','UserController');
+Route::get('/borraUsuario','UserController@destroy')->name('user.delete');
+Route::get('/usuarios','UserController@index');
+
 
 Route::get('/escritorio',function (){
     return view('dashboard');

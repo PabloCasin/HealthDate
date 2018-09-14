@@ -53,7 +53,7 @@ Escritorio
     </div>
     <div class="card-footer">
       <div class="stats">
-        <i class="material-icons">person</i> Listado Pacientes
+        <a href="/usuarios"><i class="material-icons">person</i> Listado Pacientes</a>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@ Escritorio
 <div class="col-md-4">
   <div class="card card-chart">
     <div class="card-header card-header-success">
-      <div class="ct-chart" id="dailySalesChart"></div>
+      <div class="	ct-chart" id="dailySalesChart"></div>
     </div>
     <div class="card-body">
       <h4 class="card-title">Daily Sales</h4>
@@ -377,7 +377,7 @@ Escritorio
             <td>{{$cita->fechaCita}}</td>
             <td>{{$cita->horaEntrada}}</td>
             <td>{{$cita->tratamineto}} {{$cita->apellido}} {{$cita->segundoApellido}}</td>
-            <td><i class="material-icons">date_range</i></td>
+            <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal" data-id="{{$cita->id}}"><i class="material-icons">date_range</i></button></td>
           </tr>
     	@endforeach
         </tbody>
@@ -386,24 +386,39 @@ Escritorio
   </div>
 </div>
 </div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cerrar</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 <script>
-//Create a simple line chart
-var data = {
-  // A labels array that can contain any sort of values
-  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-  // Our series array that contains series objects or in this case series data arrays
-  series: [
-    [5, 2, 4, 2, 0]
-  ]
-};
-
-// As options we currently only set a static size of 300x200 px
-var options = {
-  width: '300px',
-  height: '200px'
-};
-
-// In the global name space Chartist we call the Line function to initialize a line chart. As a first parameter we pass in a selector where we would like to get our chart created. Second parameter is the actual data object and as a third parameter we pass in our options
-new Chartist.Line('.ct-chart', data, options);
+new Chartist.Line('.ct-chart', {
+	  labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+	  series: [
+	    [12, 9, 7, 8, 5],
+	    [2, 1, 3.5, 7, 3],
+	    [1, 3, 4, 5, 6]
+	  ]
+	}, {
+	  fullWidth: true,
+	  chartPadding: {
+	    right: 40
+	  }
+	});
 </script>
 @endsection
